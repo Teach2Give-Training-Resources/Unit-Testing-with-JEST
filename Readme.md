@@ -43,7 +43,9 @@ pnpm i -D jest ts-jest @types/jest ts-node
 
 **ts-jest -** It integrates seamlessly with Jest, making it easier to run tests on TypeScript code without needing additional transpilation steps.
 
-**@types/jest** - provides type definitions for Jest, a unit testing framework for JavaScript. It provides type-checking and auto-completion for Jest functions, objects, and classes.
+**@types/jest** - When you're using Jest with TypeScript, the `@types/jest` package provides type definitions that help TypeScript understand Jest's testing functions, like `describe`, `test`, and `expect`.
+
+ts-node- *we need ts-node for code transpilation from typescript to javascript. TSX helps us run typescript/jsx code but does not give a runtime environment that understands typescript.*
 
 #### *step 3: Create a jest config file*
 
@@ -158,7 +160,7 @@ it("should return the product of 3 and 2 ", () => {
 
 A well written unit test should undergo the AAA phases
 
-A - Arrange: Initialises a small piece of an application it wants to test (SUT)
+A - Arrange: Initializes a small piece of an application it wants to test (SUT)
 
 A- Act: Applies some stimulus
 
@@ -224,7 +226,7 @@ With the above demo, you have known how to write a proper test using AAA phases.
 
 ## NOTE ‼️‼️
 
-We are not yet there yet, while using the above way to writeour tests, we are not separating tests. Whenever a matcher fails, the entire test will fail and this is not the best practice. Therefore, we need to understand the FIRST-U Principle
+We are not yet there yet, while using the above way to write our tests, we are not separating tests. Whenever a matcher fails, the entire test will fail and this is not the best practice. Therefore, we need to understand the FIRST-U Principle
 
 `       expect(actual.usernameCharacters).toContain('Q')`
 
@@ -457,6 +459,7 @@ Whenever you run your code, you should expect such an output:
 
 Used to report the percentage of lines your code was tested
 
+
 Use the following comment to skip test on most common functions
 
 ```
@@ -467,11 +470,9 @@ The generated coverage has index.html file with the test report.
 
 ![1747493776207](image/Readme/1747493776207.jpg)
 
-
 Coverage report on the terminal
 
 ![1747493832620](image/Readme/1747493832620.png)
-
 
 Detailed coverage report on the webpage
 

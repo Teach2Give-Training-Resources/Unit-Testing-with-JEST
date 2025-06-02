@@ -1,1 +1,2 @@
-console.log("Hello, world!");
+/* istanbul ignore next */
+console.log("Hello TS!");

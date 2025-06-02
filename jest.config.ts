@@ -1,32 +1,14 @@
-// import type { JestConfigWithTsJest } from "ts-jest";
-
-// const config: JestConfigWithTsJest = {
-//   preset: "ts-jest",
-//   testEnvironment: "node",
-//   verbose: true
-
-// }
-
-// export default config;
-
-// docs: https://jestjs.io/docs/configuration
 import type { Config } from 'jest';
 
-
 const config: Config = {
-  preset: "ts-jest",
-  testEnvironment: "node",
-  verbose: true,
-  collectCoverage: true,
-  collectCoverageFrom: [
-    '<rootDir>/src/app/**/*.ts',
-  ],
-
-};
+    preset: 'ts-jest', //means that we are using TypeScript with Jest
+    testEnvironment: 'node', //the environment in which the tests will run
+    verbose: true, //show individual test results with the test suite hierarchy
+    collectCoverage: true, //collect coverage information
+    coverageDirectory: 'coverage', //directory where Jest should output its coverage files
+    collectCoverageFrom: [
+        '<rootDir>/src/**/*.ts', //collect coverage from all TypeScript files in the src directory
+    ]
+}
 
 export default config;
-
-
-// testMatch: [
-//   `${baseDir}/test/**/*.test.ts`,
-// ]
