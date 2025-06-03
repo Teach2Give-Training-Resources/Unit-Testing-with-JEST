@@ -71,7 +71,7 @@ This will create jest.config.js, It allows developers to customize Jest's behavi
 
 Attached is a screenshot of how your folder structure should look like.
 
-![1747478427828](image/Readme/1747478427828.png)
+![1748932742805](image/Readme/1748932742805.png)
 
 #### step 5: Running our first test ur first test
 
@@ -458,7 +458,6 @@ Whenever you run your code, you should expect such an output:
 ## Coverage
 
 Used to report the percentage of lines your code was tested
-
 
 Use the following comment to skip test on most common functions
 
