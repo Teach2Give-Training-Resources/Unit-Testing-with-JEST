@@ -1,4 +1,4 @@
-import { authenticateUser, product, UserNameToLowerCase } from "../src/BasicUtils";
+import { API, authenticateUser, product, UserNameToLowerCase } from "../src/BasicUtils";
 
 describe("Basic Utils suite", () => {
     it("should return the product of 3 and 2", () => {
@@ -189,6 +189,18 @@ describe("Basic Utils suite - FIRST-U Principle", () => {
 
     // todo
     it.todo("should implement a new feature for user authentication")
+
+    // Asynchronous tests
+    it("should fetch users from the API", async () => {
+        const api = new API();
+        const users = await api.fetchUsers();
+        expect(users).toHaveLength(3);
+        expect(users).toBeInstanceOf(Array);
+    })
+
+    
+
+    
 })
 
 

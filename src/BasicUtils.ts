@@ -31,3 +31,24 @@ export class UserNameToLowerCase {
         return username.toLowerCase();
     }
 }
+
+//Asynchronous tests
+export class API {
+    fetchUsers() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve([
+                    { id: 1, name: "Alice" },
+                    { id: 2, name: "Bob" },
+                    { id: 3, name: "Charlie" }
+                ]);
+            }, 1000);
+        })
+    }
+
+}
+
+
+export const getRandomNumber = () => Math.floor(Math.random() * 10);
+
+
